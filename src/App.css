@@ -1,0 +1,101 @@
+.wb-gh,
+.wb-logo {
+  background-size: 20px;
+}
+
+pre {
+  overflow: hidden;
+  word-break: break-all;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+a {
+  color: #999;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  background-color: #3F3F3F;
+  margin: 5px;
+  color: white;
+}
+
+button:active {
+  background-color: #999;
+}
+
+input:not([type=checkbox]),
+select {
+  min-width: 0;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.Toolbar {
+  box-sizing: border-box;
+  width: 249px;
+  flex: none;
+  border-left: 2px solid #999;
+  background-color: #666;
+  color: white;
+  text-align: left;
+  padding: 5px 10px;
+  overflow: auto;
+  user-select: none;
+}
+
+.Toolbar .title {
+  font-weight: bold;
+  margin-left: -3px;
+}
+
+.Toolbar table {
+  width: 100%;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 100vw;
+  max-width: 100vw;
+  display: flex;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  overflow: hidden;
+  user-select: none;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
