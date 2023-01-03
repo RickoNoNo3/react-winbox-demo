@@ -45,18 +45,17 @@ function App() {
   const [isFocus, setIsFocus] = useState(false);
   const [position, setPosition] = useState(undefined);
   const [size, setSize] = useState(undefined);
-  const [sizeLimit, setSizeLimit] = useState(undefined);
   const refreshInfo = () => {
     setPosition(ref.current?.getPosition());
     setSize(ref.current?.getSize());
-    setSizeLimit(ref.current?.getSizeLimit());
   };
   return (
     <div className="App">
       <WinBox noMove noResize noClose noFull noMax noMin noHeader width={500} height={150} x={0} y={0}>
         <div style={{userSelect: 'none'}}>
           <center><h3>Fixed window with <code>noHeader</code> and <code>noResize</code></h3></center>
-          <!-- ......... -->
+          <center>Click here to blur another</center>
+          <center>(listen <code>onblur</code> and <code>onfocus</code> to change some props dynamically)</center>
         </div>
       </WinBox>
       {open && (
@@ -68,8 +67,8 @@ function App() {
           noMax={noMax}
           noFull={noFull}
           noClose={noClose}
-          width={Math.min(document.body.clientWidth, 800)}
-          height={Math.min(document.body.clientHeight, 600)}
+          width={Math.min(document.body.clientWidth, 700)}
+          height={Math.min(document.body.clientHeight, 500)}
           x="center"
           y="center"
           top={top}
@@ -89,7 +88,6 @@ function App() {
               setShow(false);
               setPosition(0);
               setSize(0);
-              setSizeLimit(0);
             });
           }}
           onfocus={() => setIsFocus(true)}
@@ -99,7 +97,7 @@ function App() {
           <div style={{padding: 10}}>
             <h3 style={{margin: 0}}>React Winbox Demo with Title "{title}"</h3>
             <hr />
-            <!-- ......... --->
+            <DemoDoc />
           </div>
         </WinBox>
       )}
@@ -147,11 +145,9 @@ function App() {
   const [isFocus, setIsFocus] = useState(false);
   const [position, setPosition] = useState(undefined);
   const [size, setSize] = useState(undefined);
-  const [sizeLimit, setSizeLimit] = useState(undefined);
   const refreshInfo = () => {
     setPosition(ref.current?.getPosition());
     setSize(ref.current?.getSize());
-    setSizeLimit(ref.current?.getSizeLimit());
   };
   useEffect(() => {
     setTimeout(() => {
@@ -274,8 +270,8 @@ function App() {
           noMax={noMax}
           noFull={noFull}
           noClose={noClose}
-          width={Math.min(document.body.clientWidth, 800)}
-          height={Math.min(document.body.clientHeight, 600)}
+          width={Math.min(document.body.clientWidth, 700)}
+          height={Math.min(document.body.clientHeight, 500)}
           x="center"
           y="center"
           top={top}
@@ -295,7 +291,6 @@ function App() {
               setOpen(false);
               setPosition(0);
               setSize(0);
-              setSizeLimit(0);
             });
           }}
           onfocus={() => setIsFocus(true)}
