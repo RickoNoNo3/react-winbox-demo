@@ -85,7 +85,7 @@ function App() {
           onclose={() => {
             // destroying actions while \`onclose\` must be wrapped within \`setTimeout\`
             setTimeout(() => {
-              setShow(false);
+              setOpen(false);
               setPosition(0);
               setSize(0);
             });
